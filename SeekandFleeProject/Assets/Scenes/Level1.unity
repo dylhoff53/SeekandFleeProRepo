@@ -267,10 +267,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTarget: {fileID: 1050079876}
-  newTarget: {fileID: 0}
-  myMaxSpeed: 2
-  myTransform: {fileID: 0}
+  newTarget: {fileID: 1917141312}
+  myMaxSpeed: 0
+  myTransform: {fileID: 1864325396}
   pastTarger: 0
+  playerStart: {fileID: 1439075903}
+  speedCount: 80
 --- !u!1 &203657507 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6566682776207978024, guid: b1d334e524eb73846a64c7bdbae1f663, type: 3}
@@ -289,10 +291,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTarget: {fileID: 1050079876}
-  newTarget: {fileID: 0}
-  myMaxSpeed: 2
-  myTransform: {fileID: 0}
+  newTarget: {fileID: 1917141312}
+  myMaxSpeed: 0
+  myTransform: {fileID: 892112871}
   pastTarger: 0
+  playerStart: {fileID: 1439075903}
+  speedCount: 100
 --- !u!1 &234345501
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,10 +481,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTarget: {fileID: 1050079876}
-  newTarget: {fileID: 0}
-  myMaxSpeed: 2
-  myTransform: {fileID: 0}
+  newTarget: {fileID: 1917141312}
+  myMaxSpeed: 0
+  myTransform: {fileID: 374845954}
   pastTarger: 0
+  playerStart: {fileID: 1439075903}
+  speedCount: 95
 --- !u!1 &528514664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6566682776207978024, guid: b1d334e524eb73846a64c7bdbae1f663, type: 3}
@@ -499,10 +505,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTarget: {fileID: 1050079876}
-  newTarget: {fileID: 0}
-  myMaxSpeed: 2
-  myTransform: {fileID: 0}
+  newTarget: {fileID: 1917141312}
+  myMaxSpeed: 0
+  myTransform: {fileID: 818394884}
   pastTarger: 0
+  playerStart: {fileID: 1439075903}
+  speedCount: 120
 --- !u!4 &556724883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6566682776207978028, guid: b1d334e524eb73846a64c7bdbae1f663, type: 3}
@@ -924,7 +932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732379512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 250}
+  m_LocalPosition: {x: 0, y: 3, z: 600}
   m_LocalScale: {x: 15, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1080,6 +1088,10 @@ PrefabInstance:
     - target: {fileID: 5490694283245877425, guid: 68f8259bba3f1864f82983f552c369e6, type: 3}
       propertyPath: forwardForce
       value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490694283245877425, guid: 68f8259bba3f1864f82983f552c369e6, type: 3}
+      propertyPath: sidewaysForce
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 5490694283245877428, guid: 68f8259bba3f1864f82983f552c369e6, type: 3}
       propertyPath: m_UseGravity
@@ -1612,10 +1624,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTarget: {fileID: 1050079876}
-  newTarget: {fileID: 0}
-  myMaxSpeed: 75
-  myTransform: {fileID: 0}
+  newTarget: {fileID: 1917141312}
+  myMaxSpeed: 0
+  myTransform: {fileID: 2131320187}
   pastTarger: 0
+  playerStart: {fileID: 1439075903}
+  speedCount: 75
 --- !u!1001 &1034492077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,6 +1897,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5490694283245877435, guid: 68f8259bba3f1864f82983f552c369e6, type: 3}
   m_PrefabInstance: {fileID: 793112771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1439075903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5490694283245877425, guid: 68f8259bba3f1864f82983f552c369e6, type: 3}
+  m_PrefabInstance: {fileID: 793112771}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439075901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1f4eb1d81a8c546b24ff90991e7e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1587495448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6566682776207978028, guid: b1d334e524eb73846a64c7bdbae1f663, type: 3}
@@ -2097,7 +2122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917141311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1050079876}
@@ -2359,10 +2384,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTarget: {fileID: 1050079876}
-  newTarget: {fileID: 0}
-  myMaxSpeed: 2
-  myTransform: {fileID: 0}
+  newTarget: {fileID: 1917141312}
+  myMaxSpeed: 0
+  myTransform: {fileID: 705628018}
   pastTarger: 0
+  playerStart: {fileID: 1439075903}
+  speedCount: 100
 --- !u!4 &2131320187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6566682776207978028, guid: b1d334e524eb73846a64c7bdbae1f663, type: 3}
@@ -2456,6 +2483,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myTarget: {fileID: 1050079876}
   newTarget: {fileID: 1917141312}
-  myMaxSpeed: -5
+  myMaxSpeed: 0
   myTransform: {fileID: 1587495448}
   pastTarger: 0
+  playerStart: {fileID: 1439075903}
+  speedCount: -5

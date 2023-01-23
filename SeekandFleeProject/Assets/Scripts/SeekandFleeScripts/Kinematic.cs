@@ -10,9 +10,13 @@ public class Kinematic : MonoBehaviour
     private KinematicSeek mySteering;
     public Transform myTarget;
     public Transform newTarget;
-    public float myMaxSpeed = 5f;
+    public float myMaxSpeed = 0f;
     public Transform myTransform;
     public bool pastTarger = false;
+    public PlayerMovement playerStart;
+    private int count = 0;
+    public int speedCount;
+
 
     private void Start()
     {
@@ -50,10 +54,18 @@ public class Kinematic : MonoBehaviour
     {
         KinematicSteeringOutput steering = mySteering.getSteering();
         KinematicUpdate(steering, Time.deltaTime);
+
         if(myTransform.position.z < myTarget.position.z && pastTarger == false)
         {
             pastTarger = true;
             mySteering.target = newTarget;
+        }
+
+        if(playerStart.gameStart == true && count == 0)
+        {
+            count++;
+            mySteering.maxSpeed = speedCount;
+
         }
     }
 }
